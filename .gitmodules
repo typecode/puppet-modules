@@ -34,3 +34,6 @@
 [submodule "openssh"]
 	path = openssh
 	url = https://github.com/example42/puppet-openssh
+[submodule "nginx"]
+	path = nginx
+	url = https://github.com/BenoitCattie/puppet-nginx.git

@@ -1,0 +1,16 @@
+# File Managed by Puppet
+
+<VirtualHost *:8000>
+	ServerName <%= name %>
+	<% if aliases != "" -%>
+		ServerAlias <%= aliases %>
+	<% end -%>
+	ServerAdmin webmaster@<%= name %>
+
+	Alias /static/ /apps/<%= name %>/current/static/
+	WSGIScriptAlias / /apps/<%= name %>/app.wsgi
+
+	ErrorLog logs/<%= name %>-error_log
+	CustomLog logs/<%= name %>-access_log common
+</VirtualHost>
+
